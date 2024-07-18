@@ -3,10 +3,10 @@ export interface IRegisterDto {
     lastName: string;
     userName: string;
     email: string;
-    password: string;
     address: string;
+    password: string;
 }
-
+ 
 export interface ILoginDto {
     userName: string,
     password: string
@@ -23,8 +23,7 @@ export interface IAuthUser {
     lastName: string;
     userName: string;
     email: string;
-    password: string;
-    address: string;
+    address: string,
     createdAt: string,
     roles: string[];
 }

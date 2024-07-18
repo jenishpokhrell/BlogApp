@@ -1,4 +1,4 @@
-import { PATH_PAGE, PATH_PUBLIC } from "../routes/path";
+import { PATH_MAIN, PATH_PUBLIC } from "../routes/path";
 
 //URLS 
 export const HOST_API_KEY = "https://localhost:44309/api";
@@ -17,5 +17,5 @@ export const MY_LOGS_URL = '/Logs/My Logs';
 
 //AUTH ROUTES
 export const PATH_AFTER_REGISTER = PATH_PUBLIC.login;
-export const PATH_AFTER_LOGIN = PATH_PAGE.main;
+export const PATH_AFTER_LOGIN = PATH_MAIN.blogs;
 export const PATH_AFTER_LOGOUT = PATH_PUBLIC.login;

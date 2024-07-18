@@ -7,6 +7,7 @@
         public string LastName { get; set; }
         public string Username { get; set; }
         public string Email { get; set; }
+        public string Address { get; set; }
         public DateTime createdAt { get; set; }
         public IEnumerable<string> Roles { get; set; }
 
