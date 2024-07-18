@@ -22,6 +22,7 @@ JWT Bearer
 - Only Authorized user can delete and update the blogs.
 - Logs of users are saved whenever they perform some activities on the project like posting blogs, deleting blogs, registering etc.
 
+**NOTE: WORKING ON FRONT-END PART**
 
 ## Author
 
