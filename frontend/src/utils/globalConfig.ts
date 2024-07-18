@@ -1,0 +1,21 @@
+import { PATH_PAGE, PATH_PUBLIC } from "../routes/path";
+
+//URLS 
+export const HOST_API_KEY = "https://localhost:44309/api";
+export const REGISTER_URL = '/Auth/register-user';
+export const LOGIN_URL = '/Auth/Login';
+export const ME_URL = '/Auth/Me';
+export const USERS_URL = '/Auth/Users';
+export const INFO_FOR_USERS_URL = '/Auth/UserInfoForUsers';
+export const BLOGS_URL = '/Blogs';
+export const MY_BLOGS_URL = '/Blogs/Mine';
+export const EDIT_BLOGS_URL = '/Blogs/{id}';
+export const DELETE_BLOGS_URL = '/Blogs/{id}';
+export const COMMENT_URL = '/Comment/{blogId}';
+export const LOGS_URL = '/Logs/Get ALL Logs';
+export const MY_LOGS_URL = '/Logs/My Logs';
+
+//AUTH ROUTES
+export const PATH_AFTER_REGISTER = PATH_PUBLIC.login;
+export const PATH_AFTER_LOGIN = PATH_PAGE.main;
+export const PATH_AFTER_LOGOUT = PATH_PUBLIC.login;
