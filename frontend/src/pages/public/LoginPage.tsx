@@ -34,13 +34,13 @@ const LoginPage = () => {
                             <button type="button" className=' w-80'>Login</button>
                         </div>
                         
-                        {/* <div className=' mt-10 ml-1'>
+                        <div className=' mt-10 ml-1'>
                             <p className=''>Haven't registered yet? 
                                 <Link to={PATH_PUBLIC.register}>
                                 <span className=' ml-2 transition ease-in-out delay-150 text-cyan-600 cursor-pointer italic'>Create an account!</span>
                                 </Link>
                             </p>
-                        </div> */}
+                        </div>
                     </div>
                 </div>
             </div>
