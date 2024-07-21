@@ -31,3 +31,7 @@ button:hover {
 .home{
   height: 100vh;
 }
+input::placeholder {
+  opacity: .6;
+  padding-left: 8px;
+}
