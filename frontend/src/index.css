@@ -24,14 +24,21 @@ button {
   cursor: pointer;
   transition: .5s;
 }
+
 button:hover {
   background: transparent;
   color: black;
 }
+
 .home{
   height: 100vh;
 }
+
 input::placeholder {
   opacity: .6;
-  padding-left: 8px;
+}
+
+input[type="text"],
+input[type="password"]{
+  padding-left: 16px;
 }

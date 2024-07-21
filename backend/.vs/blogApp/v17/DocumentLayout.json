@@ -58,8 +58,7 @@
               "RelativeToolTip": "blogApp\\Core\\Dtos\\Auth\\InfoForUsers.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAsAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T18:06:09.348Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T18:06:09.348Z"
             },
             {
               "$type": "Document",
@@ -71,8 +70,7 @@
               "RelativeToolTip": "blogApp\\Core\\Dtos\\Auth\\UserInfo.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAgAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T18:05:26.851Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-18T18:05:26.851Z"
             },
             {
               "$type": "Document",
@@ -94,7 +92,7 @@
               "RelativeDocumentMoniker": "blogApp\\Core\\Services\\BlogServices.cs",
               "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Services\\BlogServices.cs",
               "RelativeToolTip": "blogApp\\Core\\Services\\BlogServices.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAQwCQAAAAtAAAA",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwBwAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T16:14:39.68Z",
               "EditorCaption": ""
@@ -133,8 +131,7 @@
               "RelativeToolTip": "blogApp\\Core\\Interfaces\\ICommentService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-02-28T19:16:11.16Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-02-28T19:16:11.16Z"
             }
           ]
         }
