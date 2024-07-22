@@ -36,6 +36,14 @@ button:hover {
 
 input::placeholder {
   opacity: .6;
+<<<<<<< HEAD
+=======
+}
+
+input[type="text"],
+input[type="password"]{
+  padding-left: 16px;
+>>>>>>> 7fc862838516278ffc7194e25dcb1c048d9c7b8b
 }
 
 input[type="text"],
