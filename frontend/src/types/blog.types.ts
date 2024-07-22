@@ -1,8 +1,12 @@
 export interface IPostBlogDto{
+    id: string;
     blogTitle: string,
     description: string,
 }
-export interface IGetBlogDto extends IPostBlogDto{
+export interface IGetBlogDto{
+    id: string;
+    blogTitle: string,
+    description: string,
     createdAt: string,
     postedBy: string,
     comments: string[]

@@ -24,6 +24,7 @@ namespace blogApp.Controllers
 
         //----------------------->Posting new blog<---------------------------------
         [HttpPost]
+        [Route("Create")]
         [Authorize]
         public async Task<ActionResult> PostBlog([FromBody] PostBlogDto postBlogDto)
         {
@@ -63,7 +64,7 @@ namespace blogApp.Controllers
 
         //----------------------->Get all blogs<---------------------------------
         [HttpGet]
-        [Authorize]
+        //[Authorize]
         public async Task<ActionResult<IEnumerable<GetBlogDto>>> GetAllBlogs()
         {
             var blogs = await _blogServices.GetBlogsAsync();
