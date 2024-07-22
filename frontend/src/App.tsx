@@ -23,7 +23,7 @@ const App:React.FC = () => {
           <Route path={PATH_PUBLIC.unauthorized} element = {<UnauthorizedPage/>}/>
           <Route path={PATH_MAIN.blogs} element = {<Blogs/>} />
         </Routes>
-        <Footer/>
+        {/* <Footer/> */}
         
       {/* </div> */}
     </>
