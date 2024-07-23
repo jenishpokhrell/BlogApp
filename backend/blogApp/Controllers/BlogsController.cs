@@ -64,7 +64,7 @@ namespace blogApp.Controllers
 
         //----------------------->Get all blogs<---------------------------------
         [HttpGet]
-        //[Authorize]
+        [Authorize]
         public async Task<ActionResult<IEnumerable<GetBlogDto>>> GetAllBlogs()
         {
             var blogs = await _blogServices.GetBlogsAsync();

@@ -2,12 +2,14 @@ import { Link } from 'react-router-dom'
 import image2 from '../../assets/2.png'
 import { PATH_PUBLIC } from '../../routes/path'
 import { IoIosArrowBack } from 'react-icons/io'
+import Footer from '../../components/Footer'
 
 // import Footer from './Footer'
 
 const LoginPage = () => {
 
     return (
+        <>   
         <div className=' home flex justify-evenly items-center'>
             <div className=' ml-20'>
             <Link to={PATH_PUBLIC.home}>
@@ -44,8 +46,9 @@ const LoginPage = () => {
                     </div>
                 </div>
             </div>
-
         </div>
+        <Footer/>
+        </>
     )
 }
 
