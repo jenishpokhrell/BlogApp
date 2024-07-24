@@ -114,10 +114,10 @@ const AuthContextProvider = ({ children }: IProps) => {
 
     //Login Method
     const login = useCallback(async (userName: string, password: string) => {
-        const response = await axiosInstance.post(LOGIN_URL, {
+        const response = await axiosInstance.post<ILoginResponseDto>(LOGIN_URL, {
             userName,
             password
-        })
+        });
         Swal.fire({
             position: "center",
             icon: "success",
@@ -130,7 +130,7 @@ const AuthContextProvider = ({ children }: IProps) => {
         setSession(newToken);
         dispatch({
             type: IAuthContextActionTypes.LOGIN,
-            payload: userInfo
+            payload: userInfo,
         })
         redirect(PATH_AFTER_LOGIN)
     }, [])
@@ -155,7 +155,7 @@ const AuthContextProvider = ({ children }: IProps) => {
         logout,
     };
 
-    return ( <AuthContext.Provider value={valuesObject}>{children}</AuthContext.Provider>)
+    return <AuthContext.Provider value={valuesObject}>{children}</AuthContext.Provider>;
 }
 
 export default AuthContextProvider;

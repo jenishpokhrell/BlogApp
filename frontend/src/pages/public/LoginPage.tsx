@@ -109,7 +109,7 @@ const LoginPage = () => {
                                     {errors.password && <span>{errors.password.message}</span>}                        
                                 </div>
                                 <div className='mb-7'>
-                                    <button type="button" className=' w-80' onClick={() => { }}>Login</button>
+                                    <button type='submit' className=' w-80' onClick={() => { }}>Login</button>
                                 </div>
 
                                 <div className=' mt-10 ml-1'>
