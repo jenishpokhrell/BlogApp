@@ -24,28 +24,28 @@ const authReducer = (state: IAuthContextState, action: IAuthContextAction) => {
             user: undefined
         };
     }
-    return state
-}
+    return state;
+};
 
 // We need an initial state object for useReducer Hook
 const initialAuthState: IAuthContextState = {
     isAuthenticated: false,
     isAuthLoading: true,
     user: undefined
-}
+};
 
 //We create our context here and export it
-export const AuthContext = createContext<IAuthContext | null>(null)
+export const AuthContext = createContext<IAuthContext | null>(null);
 
 // We need an interface for our context props
 interface IProps {
     children: ReactNode;
-}
+};
 
 // We create a component to manage all auth functionalities, export it and use it
 const AuthContextProvider = ({ children }: IProps) => {
     const [state, dispatch] = useReducer(authReducer, initialAuthState);
-    const redirect = useNavigate()
+    const redirect = useNavigate();
 
     // Initialization Method
     const initializeAuthContext = useCallback(async () => {
@@ -57,11 +57,11 @@ const AuthContextProvider = ({ children }: IProps) => {
                     token,
                 })
                 // In response, we receive jwt token and user data
-                const { newToken, userInfo } = response.data
+                const { newToken, userInfo } = response.data;
                 setSession(newToken);
                 dispatch({
                     type: IAuthContextActionTypes.LOGIN,
-                    payload: userInfo
+                    payload: userInfo,
                 })
 
             } else {
