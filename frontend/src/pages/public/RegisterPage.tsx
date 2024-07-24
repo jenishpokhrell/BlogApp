@@ -45,6 +45,13 @@ const RegisterPage = () => {
             setLoading(true);
             await register(data.firstName, data.lastName, data.userName,  data.email, data.address, data.password)
             setLoading(false)
+            Swal.fire({
+                position: "center",
+                icon: "success",
+                title: "User Created Successfully",
+                showConfirmButton: false,
+                timer: 1500
+              });
         }catch(error){
             setLoading(false)
             const err = error as { data: string; status: number}
@@ -179,7 +186,7 @@ const RegisterPage = () => {
                                     </div>
                                 </div>
                                 <div className='mb-7'>
-                                    <button type="button" className=' w-80'>Sign up</button>
+                                    <button type='submit' className=' w-80' onClick={() => { }}>Sign up</button>
                                 </div>
 
                                 <div className=' mt-8 ml-8'>

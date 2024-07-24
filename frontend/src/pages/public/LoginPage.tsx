@@ -14,7 +14,6 @@ const LoginPage = () => {
                         <div className=' w-[30%] -ml-14 flex mt-10 items-center cursor-pointer hover:-translate-x-2 transition'>
                             <IoIosArrowBack className='' size={40} />
                             <p>Go back to home page</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia illo neque quae fugit velit commodi.</p>
                         </div>
                     </Link>
                 <img src={image2} alt="blogImage" width={700} />
