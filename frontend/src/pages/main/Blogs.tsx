@@ -64,7 +64,7 @@ const Blogs = () => {
                     <div className=" text-justify">
                         {item.description}
                     </div>
-                    <div className=" w-[120px] flex items-center mt-5 cursor-pointer">
+                    <div className=" w-[140px] flex items-center mt-5 cursor-pointer">
                         <FaRegComment size={20} /> <p className=" pl-2 text-[17px] font-light">{item.comments.length > 1 ? `${item.comments.length} comments` : `${item.comments.length} comment`}</p>
                     </div>
                     <div className='mt-10'>

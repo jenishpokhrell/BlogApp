@@ -63,7 +63,7 @@ const LoginPage = () => {
             <div className=' home flex justify-evenly items-center'>
                 <div className=' ml-20'>
                     <Link to={PATH_PUBLIC.home}>
-                        <div className=' w-[30%] -ml-14 flex mt-10 items-center cursor-pointer hover:-translate-x-2 transition'>
+                        <div className=' w-[35%] -ml-14 flex mt-10 items-center cursor-pointer hover:-translate-x-2 transition'>
                             <IoIosArrowBack className='' size={40} />
                             <p>Go back to home page</p>
                         </div>
@@ -112,7 +112,7 @@ const LoginPage = () => {
                                     <button type='submit' className=' w-80' onClick={() => { }}>Login</button>
                                 </div>
 
-                                <div className=' mt-10 ml-1'>
+                                <div className=' mt-10'>
                                     <p className=''>Haven't registered yet?
                                         <Link to={PATH_PUBLIC.register}>
                                             <span className=' ml-2 transition ease-in-out delay-150 text-cyan-600 cursor-pointer italic'>Create an account!</span>
