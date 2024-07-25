@@ -1,3 +1,4 @@
+import { Roles } from "../types/auth.types";
 import axiosInstance from "../utils/axiosInstance";
 
 export const setSession = (accessToken: string | null) => {
@@ -13,3 +14,5 @@ export const setSession = (accessToken: string | null) => {
 export const getSession = () => {
     return localStorage.getItem('accessToken')
 }
+
+export const allAccessRoles = [Roles.ADMIN, Roles.USER]

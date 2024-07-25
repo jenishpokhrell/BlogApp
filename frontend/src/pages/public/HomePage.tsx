@@ -1,7 +1,7 @@
 
 import { Link } from 'react-router-dom'
 import image1 from '../../assets/1.png'
-import { PATH_PUBLIC } from '../../routes/path'
+import { PATH_MAIN, PATH_PUBLIC } from '../../routes/path'
 // import Footer from './Footer'
 // import { useNavigate } from 'react-router-dom'
 
@@ -34,9 +34,9 @@ const HomePage = () => {
                     <Link to={PATH_PUBLIC.unauthorized}>
                         <p>No Auth</p>
                     </Link> */}
-                    {/* <Link to={PATH_MAIN.blogs}>
+                    <Link to={PATH_MAIN.blogs}>
                         <p>Go to Blog Page</p>
-                    </Link> */}
+                    </Link>
                 </div>
             </div>
             {/* <Footer/> */}

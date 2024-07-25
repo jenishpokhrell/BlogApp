@@ -30,10 +30,9 @@ const Blogs = () => {
                 title: "Oops...",
                 text: "Something went wrong! Couldn't fetch the data",
             });
-            redirect('/');
             setLoading(false)
+            }
         }
-    }
 
     useEffect(() => {
         fetchBlogs()

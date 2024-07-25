@@ -6,6 +6,8 @@ import RegisterPage from "./pages/public/RegisterPage"
 import NotFoundPage from "./pages/public/NotFoundPage"
 import UnauthorizedPage from "./pages/public/UnauthorizedPage"
 import Blogs from "./pages/main/Blogs"
+import AuthGuard from "./auth/AuthGuard"
+import { allAccessRoles } from "./auth/auth.utils"
 
 const App:React.FC = () => {
 
@@ -17,7 +19,10 @@ const App:React.FC = () => {
             <Route path={PATH_PUBLIC.register} element={<RegisterPage/>}/> 
             <Route path={PATH_PUBLIC.notFound} element = {<NotFoundPage/>}/>
             <Route path={PATH_PUBLIC.unauthorized} element = {<UnauthorizedPage/>}/>
-            <Route path={PATH_MAIN.blogs} element = {<Blogs/>} />
+            
+            <Route element={<AuthGuard roles={allAccessRoles} />}>
+              <Route path={PATH_MAIN.blogs} element = {<Blogs/>}/>
+            </Route>
         </Routes> 
     </>
   )

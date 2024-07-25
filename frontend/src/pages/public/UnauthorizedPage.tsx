@@ -11,8 +11,9 @@ const NotFoundPage = () => {
             <div className="mb-6 text-wrap">
                 <h1 className=" text-[2.5rem] font-bold">You are not authorized to access this page</h1>
             </div>
-            <div className="mb-6">
+            <div className=" flex justify-center mb-6">
                 <p>Sorry, you don't have the necessary permissions to view this content.</p>
+                <span className=" pl-1 font-bold"> Try logging in first</span>
             </div>
             <div>
                 <Link to={PATH_PUBLIC.home}>
