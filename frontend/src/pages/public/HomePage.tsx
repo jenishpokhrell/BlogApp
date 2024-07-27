@@ -20,7 +20,6 @@ const HomePage = () => {
                 </div>
                 <div className='mb-7 pl-28'>
                     <Link to={PATH_PUBLIC.login}><button type="button" className='w-72'>Login</button></Link>
-                    {/* <button type="button" className='w-72' onClick={() => redirect(PATH_PUBLIC.login)}>Login</button> */}
                 </div>
                 <div className='pl-28'>
                     <Link to={PATH_PUBLIC.register}>
@@ -34,9 +33,9 @@ const HomePage = () => {
                     <Link to={PATH_PUBLIC.unauthorized}>
                         <p>No Auth</p>
                     </Link> */}
-                    <Link to={PATH_MAIN.blogs}>
+                    {/* <Link to={PATH_MAIN.blogs}>
                         <p>Go to Blog Page</p>
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
             {/* <Footer/> */}

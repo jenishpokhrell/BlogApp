@@ -9,11 +9,13 @@ import { INFO_FOR_USERS_URL } from "../utils/globalConfig";
 import { useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import useAuth from "../hooks/useAuth.hook";
+import DropDown from "./DropDown";
 
 const Navbar = () => {
 
     // const [fName, setFName] = useState('');
-    const { user: currentUser} = useAuth()
+    const { user: currentUser} = useAuth();
+    const [openProfile, setOpenProfile] = useState(false)
 
     const fetchFirstName = async () => {
         try {
@@ -47,9 +49,14 @@ const Navbar = () => {
                         <Link to={PATH_MAIN.notifications}>
                             <li className="m-5 cursor-pointer"><IoNotificationsOutline size={26}/></li>
                         </Link>
-                        <li className="m-4 cursor-pointer flex items-center justify-between font-[350]">
+                        <li className="m-4 cursor-pointer flex items-center justify-between font-[350] transition" onClick={() => setOpenProfile((prev) => !prev)}>
                             <LuUserCircle size={26}/><span className="ml-3">{currentUser ? currentUser.username : "User"}</span>
                         </li>
+                        {
+                            openProfile &&  (
+                                <DropDown/>
+                            )
+                        }
                     </ul>
                 </nav>
             </div>

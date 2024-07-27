@@ -121,7 +121,7 @@ const AuthContextProvider = ({ children }: IProps) => {
         Swal.fire({
             position: "center",
             icon: "success",
-            title: "Login was successful",
+            title: "Login successful",
             showConfirmButton: false,
             timer: 1500
         });
@@ -140,7 +140,12 @@ const AuthContextProvider = ({ children }: IProps) => {
         setSession(null);
         dispatch({
             type: IAuthContextActionTypes.LOGOUT,
-        })
+        });
+        Swal.fire(
+            'Logged out!',
+            'Logout successfull',
+            'success'
+        );
         redirect(PATH_AFTER_LOGOUT)
     }, [])
 
