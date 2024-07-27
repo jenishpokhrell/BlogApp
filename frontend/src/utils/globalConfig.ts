@@ -13,7 +13,7 @@ export const MY_BLOGS_URL = '/Blogs/Mine';
 export const EDIT_BLOGS_URL = '/Blogs/{id}';
 export const DELETE_BLOGS_URL = '/Blogs/{id}';
 export const COMMENT_URL = '/Comment/{blogId}';
-export const LOGS_URL = '/Logs/Get ALL Logs';
+export const LOGS_URL = '/Logs/Get All Logs';
 export const MY_LOGS_URL = '/Logs/My Logs';
 
 //AUTH ROUTES

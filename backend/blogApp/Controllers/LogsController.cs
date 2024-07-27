@@ -21,10 +21,10 @@ namespace blogApp.Controllers
         //----------------------->Getting all Users log<---------------------------------
         [HttpGet]
         [Route("Get All Logs")]
-        [Authorize(Roles = StaticUserRoles.ADMIN)] //Can be only accessed by admin
+        [Authorize] //Can be only accessed by admin
         public async Task<ActionResult<IEnumerable<GetLogDto>>> GetLogs()
         {
-            var logs = _logService.GetLogsAsync();
+            var logs = await _logService.GetLogsAsync();
             return Ok(logs);
         }
 

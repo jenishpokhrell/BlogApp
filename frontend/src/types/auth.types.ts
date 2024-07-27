@@ -13,7 +13,7 @@ export interface ILoginDto {
 }
 
 export interface IInfoForUsers {
-    userName: string,
+    username: string,
     email: string,
     roles: string[]
 }
@@ -21,7 +21,7 @@ export interface IInfoForUsers {
 export interface IAuthUser {
     firstName: string;
     lastName: string;
-    userName: string;
+    username: string;
     email: string;
     address: string,
     createdAt: string,

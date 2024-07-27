@@ -1,6 +1,5 @@
 export interface ILogDto{
     createdAt: string;
-    userName: string;
+    username: string;
     description: string;
-    type: 'blog' | 'comment';
 }

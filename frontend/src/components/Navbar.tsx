@@ -3,41 +3,35 @@ import { IoMdAdd } from "react-icons/io";
 import { IoNotificationsOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
 import { PATH_MAIN } from "../routes/path";
-// import useAuth from "../hooks/useAuth.hook";
-// import { useNavigate } from "react-router-dom";
-// import axiosInstance from "../utils/axiosInstance";
-// import { IAuthUser } from "../types/auth.types";
-// import { USERS_URL } from "../utils/globalConfig";
-// import { useEffect, useState } from "react";
-// import Swal from "sweetalert2";
+import axiosInstance from "../utils/axiosInstance";
+import { IInfoForUsers } from "../types/auth.types";
+import { INFO_FOR_USERS_URL } from "../utils/globalConfig";
+import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
+import useAuth from "../hooks/useAuth.hook";
 
 const Navbar = () => {
 
-    // const [fName, setFName] = useState('')
-    // const redirect = useNavigate();
+    // const [fName, setFName] = useState('');
+    const { user: currentUser} = useAuth()
 
-    // const fetchFirstName = async () => {
-    //     try {
-    //         const response = await axiosInstance.get<IAuthUser[]>(USERS_URL)
-    //         const { data } = response;
-    //         if(Array.isArray(data) && data.length > 0){
-    //             const user = data[0]
-    //             const name = `${user.firstName}`;
-    //             setFName(name)
-    //         }
-    //     } catch (error) {
-    //         Swal.fire({
-    //             icon: "error",
-    //             title: "Oops...",
-    //             text: "Something went wrong! Couldn't fetch the data",
-    //         });
-    //         redirect('/login')
-    //     }
-    // }
+    const fetchFirstName = async () => {
+        try {
+            const response = await axiosInstance.get<IInfoForUsers[]>(INFO_FOR_USERS_URL)
+            const { data } = response;
+            console.log(data)
+        } catch (error) {
+            Swal.fire({
+                icon: "error",
+                title: "Oops...",
+                text: "Something went wrong! Couldn't fetch the data",
+            });
+        }
+    }
 
-    // useEffect(() => {
-    //     fetchFirstName()
-    // }, [])
+    useEffect(() => {
+        fetchFirstName()
+    }, [])
 
     return (
         <div className=" h-[10vh] bg-black flex justify-between items-center">
@@ -54,7 +48,7 @@ const Navbar = () => {
                             <li className="m-5 cursor-pointer"><IoNotificationsOutline size={26}/></li>
                         </Link>
                         <li className="m-4 cursor-pointer flex items-center justify-between font-[350]">
-                            <LuUserCircle size={26}/><span className="ml-3">User</span>
+                            <LuUserCircle size={26}/><span className="ml-3">{currentUser ? currentUser.username : "User"}</span>
                         </li>
                     </ul>
                 </nav>
