@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
-import { useNavigate } from "react-router-dom";
 import { IGetBlogDto } from "../../types/blog.types";
 import axiosInstance from "../../utils/axiosInstance";
 import { BLOGS_URL } from "../../utils/globalConfig";
@@ -15,7 +14,7 @@ const Blogs = () => {
     const [allBlogs, setAllBlogs] = useState<IGetBlogDto[]>([]);
     const [loading, setLoading] = useState(false);
 
-    const redirect = useNavigate();
+    // const redirect = useNavigate();
 
     const fetchBlogs = async () => {
         try {

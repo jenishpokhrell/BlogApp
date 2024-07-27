@@ -49,7 +49,7 @@ const Navbar = () => {
                         <Link to={PATH_MAIN.notifications}>
                             <li className="m-5 cursor-pointer"><IoNotificationsOutline size={26}/></li>
                         </Link>
-                        <li className="m-4 cursor-pointer flex items-center justify-between font-[350] transition" onClick={() => setOpenProfile((prev) => !prev)}>
+                        <li className="m-4 cursor-pointer flex items-center justify-between font-[350] transition-all" onClick={() => setOpenProfile((prev) => !prev)}>
                             <LuUserCircle size={26}/><span className="ml-3">{currentUser ? currentUser.username : "User"}</span>
                         </li>
                         {

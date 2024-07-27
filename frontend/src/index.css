@@ -45,11 +45,7 @@ input::placeholder {
 }
 
 input[type="text"],
-input[type="password"]{
-  padding-left: 16px;
-}
-
-input[type="text"],
+input[type="email"],
 input[type="password"]{
   padding-left: 16px;
 }
