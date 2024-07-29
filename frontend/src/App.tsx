@@ -9,6 +9,7 @@ import Blogs from "./pages/main/Blogs"
 import AuthGuard from "./auth/AuthGuard"
 import { allAccessRoles } from "./auth/auth.utils"
 import Notifications from "./pages/main/Notifications"
+import PostBlog from "./pages/main/PostBlog"
 
 const App:React.FC = () => {
 
@@ -24,6 +25,7 @@ const App:React.FC = () => {
             <Route element={<AuthGuard roles={allAccessRoles} />}>
               <Route path={PATH_MAIN.blogs} element = {<Blogs/>}/>
               <Route path={PATH_MAIN.notifications} element={<Notifications/>}/>
+              <Route path={PATH_MAIN.postBlog } element={ <PostBlog/> }/>
             </Route>
         </Routes> 
     </>
