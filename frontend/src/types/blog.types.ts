@@ -1,5 +1,4 @@
 export interface IPostBlogDto{
-    id: string;
     blogTitle: string,
     description: string,
 }
