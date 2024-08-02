@@ -46,7 +46,7 @@ const Navbar = () => {
                 <nav>
                     <ul className=" text-white flex mr-16 ">
                         <Link to={PATH_MAIN.postBlog}>
-                            <li className="m-5 cursor-pointer flex items-center font-[350]"><IoMdAdd size={26}/> <span className="ml-1">Post</span></li>
+                            <li className="m-5 border cursor-pointer flex items-center font-[350]"><IoMdAdd size={26}/> <span className="ml-1">Post</span></li>
                         </Link>
                         <Link to={PATH_MAIN.notifications}>
                             <li className="m-5 cursor-pointer"><IoNotificationsOutline size={26}/></li>

@@ -10,6 +10,7 @@ export const INFO_FOR_USERS_URL = '/Auth/UserInfoForUsers';
 export const POST_BLOGS_URL = '/Blogs/Create';
 export const BLOGS_URL = '/Blogs';
 export const MY_BLOGS_URL = '/Blogs/Mine';
+export const GET_BLOG_URL = '/Blogs/{id}';
 export const EDIT_BLOGS_URL = '/Blogs/{id}';
 export const DELETE_BLOGS_URL = '/Blogs/{id}';
 export const COMMENT_URL = '/Comment/{blogId}';
