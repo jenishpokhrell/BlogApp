@@ -67,6 +67,28 @@ namespace blogApp.Core.Services
             return blogs;
         }
 
+        // getting blogs by id
+        public async Task<GetBlogDto> GetBlogByIdAsync(int id)
+        {
+            var blog = await _context.Blogs.Where(b => b.Id == id)
+                .Select(q => new GetBlogDto()
+                {
+                    Id = q.Id,
+                    blogTitle = q.blogTitle,
+                    Description = q.Description,
+                    postedBy = q.postedBy,
+                    CreatedAt = q.CreatedAt,
+                    Comments = q.Comments.Select(comments => new CommentDto
+                    {
+                        Id = comments.Id,
+                        Comments = comments.Comments,
+                        Commentor = comments.Commentor
+                    }).ToList()
+                })
+                .FirstOrDefaultAsync();
+            return blog;
+
+        }
         //getting my blogs
         public async Task<IEnumerable<GetBlogDto>> GetMyBlogsAsync(ClaimsPrincipal User)
         { 

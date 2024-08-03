@@ -8,7 +8,7 @@
     import { CiSaveDown2 } from "react-icons/ci";
     import Footer from "../../components/Footer";
     import Swal from "sweetalert2";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PATH_MAIN } from "../../routes/path";
 
     const Blogs = () => {
@@ -16,7 +16,7 @@ import { PATH_MAIN } from "../../routes/path";
         const [allBlogs, setAllBlogs] = useState<IGetBlogDto[]>([]);
         const [loading, setLoading] = useState(false);
 
-        // const redirect = useNavigate();
+        const redirect = useNavigate();
 
         const fetchBlogs = async () => {
             try {
@@ -40,7 +40,11 @@ import { PATH_MAIN } from "../../routes/path";
         }, [])
 
         const handleClick = () => {
+            
+        }
 
+        const handleReadMore = (id: string) => {
+            redirect(`/main/blog/${id}`)
         }
 
         return (
@@ -66,12 +70,12 @@ import { PATH_MAIN } from "../../routes/path";
                             {item.description}
                         </div>
                         <div className=" w-[140px] flex items-center mt-5 cursor-pointer">
-                            <FaRegComment size={20} /> <p className=" pl-2 text-[17px] font-light">{item.comments.length > 1 ? `${item.comments.length} comments` : `${item.comments.length} comment`}</p>
+                            <FaRegComment size={20} /> <p className=" pl-2 text-[17px] font-light" onClick={() => handleReadMore(item.id)}>{item.comments.length > 1 ? `${item.comments.length} comments` : `${item.comments.length} comment`}</p>
                         </div>
                         <div className='mt-10'>
-                            <Link to={PATH_MAIN.blog}>
-                                <button type="button" className=' w-40'>Read More</button>
-                            </Link>
+                            {/* <Link to={`${PATH_MAIN.blog}/${item.id}`}> */}
+                                <button type="button" className=' w-40' onClick={() => handleReadMore(item.id)}>Read More</button>
+                            {/* </Link> */}
                         </div>
                     </div>
                 ))}

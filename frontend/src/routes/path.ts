@@ -8,7 +8,7 @@ export const PATH_PUBLIC = {
 
 export const PATH_MAIN = {
     blogs: '/main/blogs',
-    blog: '/main/blog:id',
+    blog: '/main/blog/:id',
     edit: '/main/edit-blogs:id',
     notifications: '/main/notifications',
     postBlog: '/main/postBlogs',

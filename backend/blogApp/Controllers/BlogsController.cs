@@ -47,6 +47,18 @@ namespace blogApp.Controllers
             return Ok(myBlogs);
         }
 
+        [HttpGet("{id}")]
+        [Authorize]
+        public async Task<ActionResult<GetBlogDto>> GetBlogById(int id)
+        {
+            var blog = await _blogServices.GetBlogByIdAsync(id);
+            if(blog is null)
+            {
+                return NotFound();
+            }
+            return Ok(blog);
+        } 
+
         //----------------------->Updating blogr<---------------------------------
         [HttpPut("{id}")]
         [Authorize]

@@ -11,6 +11,7 @@ namespace blogApp.Core.Interfaces
         Task<GeneralServiceResponeDto> PostNewBlogAsync(ClaimsPrincipal User, PostBlogDto postBlogDto);
         Task<IEnumerable<GetBlogDto>> GetBlogsAsync();
         Task<IEnumerable<GetBlogDto>> GetMyBlogsAsync(ClaimsPrincipal User);
+        Task<GetBlogDto> GetBlogByIdAsync(int id);
         Task<GeneralServiceResponeDto> UpdateBlogAsync(int id, ClaimsPrincipal User, UpdateBlogDto updateBlogDto);
         Task<GeneralServiceResponeDto> DeleteBlogAsync(ClaimsPrincipal User,  int id);
     }
