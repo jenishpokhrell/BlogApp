@@ -14,17 +14,12 @@ import { COMMENT_URL, GET_BLOG_URL } from '../../utils/globalConfig'
 import Swal from 'sweetalert2'
 import { IPostCommentDto } from '../../types/comment.types'
 import { yupResolver } from '@hookform/resolvers/yup'
-import { PATH_MAIN } from '../../routes/path'
 
 const Blog = () => {
 
     const { id } = useParams<{ id: string }>()
     const [blog, setBlog] = useState<IGetBlogDto | null>(null)
     const [loading, setLoading] = useState(false)
-    const [comment, setComment] = useState('')
-    // const [comments, setComments] = useState<string[]>([])
-
-    // const redirect = useNavigate()
 
     const fetchBlog = async () => {
         try {
@@ -85,6 +80,9 @@ const Blog = () => {
         }
     }
 
+    useEffect(() => {
+        onSubmitPost
+    },[])
 
     return (
         <div className=" home w-full">
@@ -143,11 +141,11 @@ const Blog = () => {
                                 </form>
                             </div>
                             {blog.comments.map((comment, index) => (
-                                <div className=' mt-5 mb-10 flex items-center'>
+                                <div  key={comment.id || index} className=' mt-5 mb-10 flex items-center'>
                                     <div className=' ml-10 border border-y-2 border-x-2 rounded-full w-13 h-13 bg-gray-200'>
                                         <img src={user} alt="user" width={55} />
                                     </div>
-                                    <div key={comment.id || index} className=' ml-5 p-2'>
+                                    <div className=' ml-5 p-2'>
                                         <div>
                                             <p className=' mr-10 font-semibold'>{comment.commentor}</p>
                                         </div>
