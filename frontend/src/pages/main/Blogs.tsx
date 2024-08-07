@@ -1,15 +1,14 @@
-    import { useEffect, useState } from "react";
-    import Navbar from "../../components/Navbar";
-    import { IGetBlogDto } from "../../types/blog.types";
-    import axiosInstance from "../../utils/axiosInstance";
-    import { BLOGS_URL } from "../../utils/globalConfig";
-    import { FaRegComment } from "react-icons/fa6";
-    import { HiOutlineDotsHorizontal } from "react-icons/hi";
-    import { CiSaveDown2 } from "react-icons/ci";
-    import Footer from "../../components/Footer";
-    import Swal from "sweetalert2";
-import { Link, useNavigate } from "react-router-dom";
-import { PATH_MAIN } from "../../routes/path";
+import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar";
+import { IGetBlogDto } from "../../types/blog.types";
+import axiosInstance from "../../utils/axiosInstance";
+import { BLOGS_URL } from "../../utils/globalConfig";
+import { FaRegComment } from "react-icons/fa6";
+import { HiOutlineDotsHorizontal } from "react-icons/hi";
+import { CiSaveDown2 } from "react-icons/ci";
+import Footer from "../../components/Footer";
+import Swal from "sweetalert2";
+import {useNavigate } from "react-router-dom";
 
     const Blogs = () => {
 
@@ -40,7 +39,7 @@ import { PATH_MAIN } from "../../routes/path";
         }, [])
 
         const handleClick = () => {
-            
+
         }
 
         const handleReadMore = (id: string) => {
@@ -73,9 +72,7 @@ import { PATH_MAIN } from "../../routes/path";
                             <FaRegComment size={20} /> <p className=" pl-2 text-[17px] font-light" onClick={() => handleReadMore(item.id)}>{item.comments.length > 1 ? `${item.comments.length} comments` : `${item.comments.length} comment`}</p>
                         </div>
                         <div className='mt-10'>
-                            {/* <Link to={`${PATH_MAIN.blog}/${item.id}`}> */}
-                                <button type="button" className=' w-40' onClick={() => handleReadMore(item.id)}>Read More</button>
-                            {/* </Link> */}
+                            <button type="button" className=' w-40' onClick={() => handleReadMore(item.id)}>Read More</button>
                         </div>
                     </div>
                 ))}

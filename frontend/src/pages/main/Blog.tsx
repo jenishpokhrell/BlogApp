@@ -4,13 +4,17 @@ import user from '../../assets/user-circles-set.png'
 import { CiSaveDown2 } from 'react-icons/ci'
 import { HiOutlineDotsHorizontal } from 'react-icons/hi'
 import Navbar from '../../components/Navbar'
-import { Controller } from 'react-hook-form'
-import { IGetBlogDto } from '../../types/blog.types'
+import * as Yup from 'yup'
+import { Controller, useForm } from 'react-hook-form'
+import { IComment, IGetBlogDto } from '../../types/blog.types'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axiosInstance from '../../utils/axiosInstance'
-import {BLOGS_URL, GET_BLOG_URL } from '../../utils/globalConfig'
+import { COMMENT_URL, GET_BLOG_URL } from '../../utils/globalConfig'
 import Swal from 'sweetalert2'
+import { IPostCommentDto } from '../../types/comment.types'
+import { yupResolver } from '@hookform/resolvers/yup'
+import { PATH_MAIN } from '../../routes/path'
 
 const Blog = () => {
 
@@ -20,15 +24,14 @@ const Blog = () => {
     const [comment, setComment] = useState('')
     // const [comments, setComments] = useState<string[]>([])
 
+    // const redirect = useNavigate()
+
     const fetchBlog = async () => {
         try {
             setLoading(true);
             const response = await axiosInstance.get<IGetBlogDto>(GET_BLOG_URL.replace('{id}', id!))
-            // console.log(response)
             setBlog(response.data)
-            // setComments(response.data.comments)
             setLoading(false)
-            // console.log(comment)
         } catch (error) {
             console.error('Error fetching blog:', error);
             Swal.fire({
@@ -41,9 +44,47 @@ const Blog = () => {
     }
 
     useEffect(() => {
-        // console.log(id)
-        fetchBlog()
+        fetchBlog();
     }, [id])
+
+
+    const commentSchema = Yup.object().shape({
+        comments: Yup.string().required('Comment field cannot be empty'),
+    })
+
+    const {
+        control,
+        handleSubmit,
+        formState: { errors },
+        reset,
+    } = useForm<IPostCommentDto>({
+        resolver: yupResolver(commentSchema),
+        defaultValues: {
+            comments: ''
+        }
+    })
+
+    const onSubmitPost = async (data: IPostCommentDto) => {
+        try {
+            const response = await axiosInstance.post<IComment>(COMMENT_URL.replace(`{blogId}`, id!), data);
+            console.log('Response from POST comment:', response.data);
+            if (blog) {
+                setBlog({
+                    ...blog,
+                    comments: [...blog.comments, response.data]
+                })
+            }
+            reset();
+        } catch (error) {
+            console.error('Error posting comment: ', error)
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: "Something went wrong! Couldn't post the comment",
+            });
+        }
+    }
+
 
     return (
         <div className=" home w-full">
@@ -77,31 +118,45 @@ const Blog = () => {
                         <div className='border mt-5'>
                             <div className=' flex items-center '>
                                 <div className=' ml-10 border border-y-2 border-x-2 rounded-full w-13 h-13 bg-gray-200'>
-                                    <img src={user} alt="user" />
+                                    <img src={user} alt="user" width={35} />
                                 </div>
-                                <div className=' w-full my-10 mx-5'>
-                                    <input type="text" placeholder=' Add a comment' className='w-[600px] p-2 border' />
-                                </div>
-                                <div className=' mr-12'>
-                                    <button className=' rounded-3xl'>Comment</button>
-                                </div>
-                            </div>
-                                {blog.comments.map((comment, index) => (
-                            <div className=' mt-5 mb-10 flex items-center'>
-                                <div className=' ml-10 border border-y-2 border-x-2 rounded-full w-13 h-13 bg-gray-200'>
-                                    <img src={user} alt="user" width={55} />
-                                </div>
-                                <div key={index} className=' ml-5 p-2'>
-                                    <div>
-                                        <p className=' mr-10 font-semibold'>{comment.commentor}</p>
-                                        {/* <p className=' italic'>Commented on: {new Date(item.createdAt).toDateString()}</p> */}
+                                <form onSubmit={handleSubmit(onSubmitPost)} className=' flex items-center'>
+                                    <div className=' w-full my-10 mx-5'>
+                                        <Controller
+                                            name="comments"
+                                            control={control}
+                                            rules={{ required: 'Comment should not be empty' }}
+                                            render={({ field }) => (
+                                                <input
+                                                    {...field}
+                                                    type='text'
+                                                    placeholder='Add a comment'
+                                                    className='w-[600px] p-2 border'
+                                                />
+                                            )}
+                                        />
+                                        {errors.comments && <span>{errors.comments.message}</span>}
                                     </div>
-                                    <div className=' mt-2'>
-                                        <p className=' font-light'>{comment.comments}</p>
+                                    <div className=' mr-12'>
+                                        <button type='submit' className=' rounded-3xl' onClick={() => { }}>Comment</button>
+                                    </div>
+                                </form>
+                            </div>
+                            {blog.comments.map((comment, index) => (
+                                <div className=' mt-5 mb-10 flex items-center'>
+                                    <div className=' ml-10 border border-y-2 border-x-2 rounded-full w-13 h-13 bg-gray-200'>
+                                        <img src={user} alt="user" width={55} />
+                                    </div>
+                                    <div key={comment.id || index} className=' ml-5 p-2'>
+                                        <div>
+                                            <p className=' mr-10 font-semibold'>{comment.commentor}</p>
+                                        </div>
+                                        <div className=' mt-2'>
+                                            <p className=' font-light'>{comment.comments}</p>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                                    ))}
+                            ))}
                         </div>
                     </div>
                 </div>

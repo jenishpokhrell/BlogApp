@@ -6,8 +6,8 @@ export interface IComment {
     id: string
     commentor: string;
     comments: string;
-    // createdAt: string;
 }
+
 export interface IGetBlogDto{
     id: string;
     blogTitle: string,
