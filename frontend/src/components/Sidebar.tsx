@@ -31,7 +31,7 @@ const Sidebar = () => {
                     </div>
                     <hr />
                     <div className=" flex justify-center items-center w-full cursor-pointer hover:bg-gray-200 transition-all">
-                        <IoLibrarySharp size={18} className=" mr-5"/>
+                        <IoLibrarySharp size={18} className=" mr-3"/>
                         <h2 className=" text-1xl py-2 ml-5 m-1">Libraries</h2>
                     </div>
                 </div>
