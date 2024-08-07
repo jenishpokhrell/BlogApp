@@ -11,6 +11,7 @@ import { allAccessRoles } from "./auth/auth.utils"
 import Notifications from "./pages/main/Notifications"
 import PostBlog from "./pages/main/PostBlog"
 import Blog from "./pages/main/Blog"
+import Profile from "./pages/main/Profile"
 
 const App:React.FC = () => {
 
@@ -28,6 +29,7 @@ const App:React.FC = () => {
               <Route path={PATH_MAIN.notifications} element={<Notifications/>}/>
               <Route path={PATH_MAIN.postBlog } element={ <PostBlog/> }/>
               <Route path={PATH_MAIN.blog} element={ <Blog/> }/>
+              <Route path={PATH_MAIN.profile} element = {<Profile/>}/>
             </Route>
         </Routes> 
     </>
