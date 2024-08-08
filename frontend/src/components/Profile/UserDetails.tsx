@@ -5,7 +5,7 @@ const UserDetails = () => {
     const { user: currentUser } = useAuth()
 
     return (
-        <div className="w-[100%] p-16 ml-32 ">
+        <div className=" p-20 ml-32 mt-10">
             <div>
                 <div className="flex justify-center bg-slate-300 rounded-full h-28 w-28 py-10 items-center
                     border">
@@ -25,12 +25,10 @@ const UserDetails = () => {
                     <h2 className=" text-2xl font-bold">Email Address </h2>
                     <p className=" text-[20px]">{currentUser?.email}</p>
                 </div>
-                <div className=" mb-5">
+                <div>
                     <h2 className=" text-2xl font-bold">Address</h2>
                     <p className=" text-[20px]">{currentUser?.address ? currentUser.address : 'No Address Provided'}</p>
                 </div>
-                
-
             </div>
         </div>
     )
