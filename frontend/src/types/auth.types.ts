@@ -15,6 +15,7 @@ export interface ILoginDto {
 export interface IInfoForUsers {
     username: string,
     email: string,
+    address: string,
     roles: string[]
 }
 
@@ -60,8 +61,8 @@ export interface IAuthContext {
         lastName: string,
         userName: string,
         email: string,
-        password: string,
         address: string,
+        password: string,
     ) => Promise<void>
     logout: () => void;
 }

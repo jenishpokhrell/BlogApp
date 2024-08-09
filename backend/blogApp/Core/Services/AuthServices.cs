@@ -248,11 +248,11 @@ namespace blogApp.Core.Services
                 LastName = user.LastName,
                 Username = user.UserName,
                 Email = user.Email,
+                Address = user.Address,
                 createdAt = user.CreatedAt,
                 Roles = Roles
             };
         }
-
 
         //Generate User Info Object For Users
         private InfoForUsers GenerateUserInfoObjectForUsers(ApplicationUser user, IEnumerable<string> Roles)

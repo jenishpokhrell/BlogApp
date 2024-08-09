@@ -36,7 +36,7 @@ const Navbar = () => {
     }, [])
 
     return (
-        <div className=" h-[10vh] bg-black flex justify-between items-center">
+        <div className=" h-[10vh] w-full bg-black flex justify-between items-center">
             <div className="ml-20 cursor-pointer">
                 <Link to={PATH_MAIN.blogs}>
                     <h1 className=" text-white text-3xl font-bold">Blog App</h1>

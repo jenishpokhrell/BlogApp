@@ -52,7 +52,7 @@ const Blogs = () => {
   }
 
   return (
-    <div className="border-x-4 border-y-4">
+    <div>
       {allBlogs.map((item) => (
         <div key={item.id} className=" w-3/5 p-10 my-20 mx-auto border hover:opacity-100">
           <div className=" flex justify-between items-center">

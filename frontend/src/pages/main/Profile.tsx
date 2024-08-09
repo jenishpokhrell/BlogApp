@@ -19,7 +19,7 @@ const Profile = () => {
     <div>
       <Navbar/>
       <div className="flex">
-        <div className=" w-[20%] bg-gray-100">
+        <div className=" home w-[20%] bg-gray-100 ">
           <div className=" flex justify-center bg-slate-300 rounded-full h-20 w-20 py-10 items-center relative top-16 border mx-auto">
             <h2 className=" font-bold text-2xl">{currentUser?.firstName.charAt(0)}</h2>
           </div>
