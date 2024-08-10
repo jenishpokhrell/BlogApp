@@ -13,6 +13,7 @@ import {useNavigate } from "react-router-dom";
     const Blogs = () => {
 
         const [allBlogs, setAllBlogs] = useState<IGetBlogDto[]>([]);
+        const [open, close] = useState(false);
         const [loading, setLoading] = useState(false);
 
         const redirect = useNavigate();
@@ -55,11 +56,6 @@ import {useNavigate } from "react-router-dom";
                             <h1 className=" text-[35px] font-semibold">{item.blogTitle}</h1>
                             <HiOutlineDotsHorizontal size={25} className=" cursor-pointer" onClick={handleClick} />
 
-                        </div>
-                        <div className="hidden z-10">
-                            <div className=" w-[160px] p-1 bg-zinc-50 flex items-center justify-center relative left-[81%] cursor-pointer hover:scale-125 transition-all">
-                                <CiSaveDown2 size={25} className=" ml-1" /><p className="ml-3">Save to library</p>
-                            </div>
                         </div>
                         <div className=" flex justify-between items-center mb-10 font-light">
                             <p className="mr-24 mt-2 text-[20px]">{item.postedBy}</p>
