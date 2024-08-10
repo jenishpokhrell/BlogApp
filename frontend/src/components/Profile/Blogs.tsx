@@ -88,6 +88,8 @@ const Blogs = () => {
                       <CiSaveDown2 className="inline mr-2" />
                       Save to Library
                     </li>
+                    {item.postedBy === currentUser?.username && (
+                    <>  
                     <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                       <CiEdit className="inline mr-2" />
                       Edit
@@ -96,6 +98,8 @@ const Blogs = () => {
                       <MdDeleteOutline className="inline mr-2" />
                       Delete
                     </li>
+                    </>
+                    )}
                   </ul>
                 </div>
               )}

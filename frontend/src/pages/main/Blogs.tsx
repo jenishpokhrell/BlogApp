@@ -11,12 +11,14 @@ import Swal from "sweetalert2";
 import { useNavigate } from "react-router-dom";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
+import useAuth from "../../hooks/useAuth.hook";
 
 const Blogs = () => {
 
     const [allBlogs, setAllBlogs] = useState<IGetBlogDto[]>([]);
     const [open, setOpen] = useState<string | null>(null);
     const [loading, setLoading] = useState(false);
+    const { user: currentUser } = useAuth()
 
     const redirect = useNavigate();
 
@@ -84,6 +86,9 @@ const Blogs = () => {
                                             <CiSaveDown2 className="inline mr-2" />
                                             Save to Library
                                         </li>
+                                        {item.postedBy === currentUser?.username && (
+                                            <>
+                                            
                                         <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
                                             <CiEdit className="inline mr-2" />
                                             Edit
@@ -92,6 +97,8 @@ const Blogs = () => {
                                             <MdDeleteOutline className="inline mr-2" />
                                             Delete
                                         </li>
+                                            </>
+                                        )}
                                     </ul>
                                 </div>
                             )}
