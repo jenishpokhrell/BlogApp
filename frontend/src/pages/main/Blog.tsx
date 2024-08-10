@@ -15,6 +15,7 @@ import Swal from 'sweetalert2'
 import { IPostCommentDto } from '../../types/comment.types'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { MdDeleteOutline } from 'react-icons/md'
+import useAuth from '../../hooks/useAuth.hook'
 
 const Blog = () => {
 
@@ -22,6 +23,7 @@ const Blog = () => {
     const [blog, setBlog] = useState<IGetBlogDto | null>(null)
     const [loading, setLoading] = useState(false)
     const [open, setOpen] = useState<string | null>(null)
+    const { user: currentUser } = useAuth()
 
     const fetchBlog = async () => {
         try {
@@ -128,14 +130,18 @@ const Blog = () => {
                                                 <CiSaveDown2 className="inline mr-2" />
                                                 Save to Library
                                             </li>
-                                            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
-                                                <CiEdit className="inline mr-2" />
-                                                Edit
-                                            </li>
-                                            <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-500">
-                                                <MdDeleteOutline className="inline mr-2" />
-                                                Delete
-                                            </li>
+                                            {blog.postedBy === currentUser?.username && (
+                                                <>
+                                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                                        <CiEdit className="inline mr-2" />
+                                                        Edit
+                                                    </li>
+                                                    <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-red-500">
+                                                        <MdDeleteOutline className="inline mr-2" />
+                                                        Delete
+                                                    </li>
+                                                </>
+                                            )}
                                         </ul>
                                     </div>
                                 )}
