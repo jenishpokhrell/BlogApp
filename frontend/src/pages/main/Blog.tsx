@@ -8,7 +8,7 @@ import * as Yup from 'yup'
 import { Controller, useForm } from 'react-hook-form'
 import { IComment, IGetBlogDto } from '../../types/blog.types'
 import { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import axiosInstance from '../../utils/axiosInstance'
 import { COMMENT_URL, GET_BLOG_URL } from '../../utils/globalConfig'
 import Swal from 'sweetalert2'
@@ -16,6 +16,7 @@ import { IPostCommentDto } from '../../types/comment.types'
 import { yupResolver } from '@hookform/resolvers/yup'
 import { MdDeleteOutline } from 'react-icons/md'
 import useAuth from '../../hooks/useAuth.hook'
+import { PATH_MAIN } from '../../routes/path'
 
 const Blog = () => {
 
@@ -24,11 +25,13 @@ const Blog = () => {
     const [loading, setLoading] = useState(false)
     const [open, setOpen] = useState<string | null>(null)
     const { user: currentUser } = useAuth()
+    const redirect = useNavigate();
 
     const fetchBlog = async () => {
         try {
             setLoading(true);
-            const response = await axiosInstance.get<IGetBlogDto>(GET_BLOG_URL.replace('{id}', id!))
+            // const response = await axiosInstance.get<IGetBlogDto>(GET_BLOG_URL.replace('{id}', id!))
+            const response = await axiosInstance.get<IGetBlogDto>(`${GET_BLOG_URL}/${id}`)
             setBlog(response.data)
             setLoading(false)
         } catch (error) {

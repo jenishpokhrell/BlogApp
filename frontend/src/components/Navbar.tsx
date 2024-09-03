@@ -35,6 +35,21 @@ const Navbar = () => {
         fetchFirstName()
     }, [])
 
+    useEffect(() => {
+        const handleOutsideClick = (event: MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (!target.closest('.dropdown')) {
+                setOpenProfile(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleOutsideClick);
+
+        return () => {
+            document.removeEventListener("mousedown", handleOutsideClick);
+        };
+    }, []);
+
     return (
         <div className=" h-[10vh] w-full bg-black flex justify-between items-center">
             <div className="ml-20 cursor-pointer">

@@ -9,7 +9,7 @@ export const PATH_PUBLIC = {
 export const PATH_MAIN = {
     blogs: '/main/blogs',
     blog: '/main/blog/:id',
-    edit: '/main/edit-blogs:id',
+    edit: '/main/editblog/:id',
     notifications: '/main/notifications',
     postBlog: '/main/postBlogs',
     postComment: '/main/post-comment:id',

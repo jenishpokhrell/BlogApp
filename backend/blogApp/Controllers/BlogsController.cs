@@ -47,7 +47,8 @@ namespace blogApp.Controllers
             return Ok(myBlogs);
         }
 
-        [HttpGet("{id}")]
+        [HttpGet]
+        [Route("GetBlog/{id}")]
         [Authorize]
         public async Task<ActionResult<GetBlogDto>> GetBlogById(int id)
         {

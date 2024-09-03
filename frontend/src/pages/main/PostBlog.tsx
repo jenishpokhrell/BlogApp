@@ -59,7 +59,7 @@ const PostBlog = () => {
         <div>
             <Navbar/>
             <div className=' text-center mt-16'>
-                <h1 className=' text-3xl font-bold' >POST BLOG</h1>
+                <h1 className=' text-3xl font-bold'>POST BLOG</h1>
             </div>
             <div className='flex justify-center mt-10 drop-shadow-2xl'>
                 <form onSubmit={handleSubmit(onSubmitPost)}>

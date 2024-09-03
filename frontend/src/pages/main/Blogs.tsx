@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { CiEdit } from "react-icons/ci";
 import { MdDeleteOutline } from "react-icons/md";
 import useAuth from "../../hooks/useAuth.hook";
+import { PATH_MAIN } from "../../routes/path";
 
 const Blogs = () => {
 
@@ -70,6 +71,14 @@ const Blogs = () => {
         };
     }, []);
 
+    const handleSave = () => {
+        
+    }
+
+    const handleEdit = (id: string) => {
+        redirect(`/main/editblog/${id}`)
+    }
+
     return (
         <div className=" home w-full">
             <Navbar />
@@ -82,14 +91,14 @@ const Blogs = () => {
                             {open === item.id && (
                                 <div className="absolute -right-5 mt-2 w-48 bg-white border rounded shadow-lg z-10">
                                     <ul className="py-1">
-                                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={handleSave}>
                                             <CiSaveDown2 className="inline mr-2" />
                                             Save to Library
                                         </li>
                                         {item.postedBy === currentUser?.username && (
                                             <>
                                             
-                                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+                                        <li className="px-4 py-2 hover:bg-gray-100 cursor-pointer" onClick={() => handleEdit(item.id)}>
                                             <CiEdit className="inline mr-2" />
                                             Edit
                                         </li>
