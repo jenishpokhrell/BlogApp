@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "E:\\ASP.NET WEB API - BLOG APP\\backend\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\dtos\\blog\\updateblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\dtos\\blog\\updateblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\services\\blogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\services\\blogservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\dtos\\auth\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\dtos\\auth\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\controllers\\blogscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -23,12 +23,12 @@
       "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\dtos\\blog\\updateblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\dtos\\blog\\updateblogdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\dtos\\auth\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\dtos\\auth\\userinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|solutionrelative:blogapp\\core\\services\\authservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FD81B189-8A4D-4C2C-A9DB-5B44998EC647}|blogApp\\blogApp.csproj|e:\\asp.net web api - blog app\\backend\\blogapp\\core\\services\\commentservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -50,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -62,20 +62,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "UpdateBlogDto.cs",
               "DocumentMoniker": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs",
               "RelativeDocumentMoniker": "blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs",
-              "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs*",
-              "RelativeToolTip": "blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs*",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAKAAAA",
+              "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs",
+              "RelativeToolTip": "blogApp\\Core\\Dtos\\Blog\\UpdateBlogDto.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAABAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T16:24:12.281Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "AuthServices.cs",
               "DocumentMoniker": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Services\\AuthServices.cs",
               "RelativeDocumentMoniker": "blogApp\\Core\\Services\\AuthServices.cs",
@@ -93,9 +93,10 @@
               "RelativeDocumentMoniker": "blogApp\\Core\\Interfaces\\IBlogService.cs",
               "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Interfaces\\IBlogService.cs",
               "RelativeToolTip": "blogApp\\Core\\Interfaces\\IBlogService.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAuwAsAAAAqAAAA",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAuwA0AAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-08-03T08:21:45.477Z"
+              "WhenOpened": "2024-08-03T08:21:45.477Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -118,32 +119,33 @@
               "RelativeDocumentMoniker": "blogApp\\Controllers\\BlogsController.cs",
               "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Controllers\\BlogsController.cs",
               "RelativeToolTip": "blogApp\\Controllers\\BlogsController.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAQwDIAAAAfAAAA",
+              "ViewState": "AQIAACAAAAAAAAAAAAAQwDIAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-22T10:16:40.069Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 1,
               "Title": "UserInfo.cs",
               "DocumentMoniker": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Dtos\\Auth\\UserInfo.cs",
               "RelativeDocumentMoniker": "blogApp\\Core\\Dtos\\Auth\\UserInfo.cs",
               "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Dtos\\Auth\\UserInfo.cs",
               "RelativeToolTip": "blogApp\\Core\\Dtos\\Auth\\UserInfo.cs",
-              "ViewState": "AQIAAAQAAAAAAAAAAAAzwAsAAAAYAAAA",
+              "ViewState": "AQIAAAUAAAAAAAAAAAAxwAsAAAAYAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-18T18:05:26.851Z"
+              "WhenOpened": "2024-07-18T18:05:26.851Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "BlogServices.cs",
               "DocumentMoniker": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Services\\BlogServices.cs",
               "RelativeDocumentMoniker": "blogApp\\Core\\Services\\BlogServices.cs",
               "ToolTip": "E:\\ASP.NET WEB API - BLOG APP\\backend\\blogApp\\Core\\Services\\BlogServices.cs",
               "RelativeToolTip": "blogApp\\Core\\Services\\BlogServices.cs",
-              "ViewState": "AQIAAHMAAAAAAAAAAAAIwCwAAAAJAAAA",
+              "ViewState": "AQIAAIcAAAAAAAAAAAAUwJIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-11T16:14:39.68Z",
               "EditorCaption": ""
